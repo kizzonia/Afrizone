@@ -34,7 +34,9 @@
   <header>
   	<div class="container">
   		<div class="logo col-md-2 col-xs-4">
-  			<a href="#"><img src="images/logo.png" class="img-responsive" alt=""/></a>
+        <%= link_to root_path do %>
+          <%= image_tag 'logo.png', class: "img-responsive" %>
+          <% end %>
   		</div>
   		<div class="col-md-10 col-xs-8 header-right">
   			<div class="row">

@@ -1,1 +1,15 @@
 <%= simple_form_for(@genre, url: genres_path, html: { class: 'form-horizontal' } )do |f| %>
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <%= f.input :title %><br />
+        <%=f.input :description %><br />
+        <%= f.input :type %><br />
+        <%= f.submit :submit, class: "btn btn-default" %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

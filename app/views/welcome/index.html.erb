@@ -220,6 +220,10 @@
 
 		<!-- Album Item -->
 		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
+			<% Genre.all.each do |genre| %>
+
+
+
 			<div class="album-card">
 				<div class="image hoverdir-target">
 					<img alt="image" src="images/album3.jpg" >
@@ -227,106 +231,18 @@
 						<div class="button-wrapper" >
 							<div class="view-button" >
 								<a class="link" href="single-album.html">
-								<span><strong class="bold">View</strong><br>Album</span>
+									<%= link_to genre.name, albums_path(genre: genre.name) do %>
+									<span><strong class="bold"></strong><br>Album</span>
+										<% end %>
 								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			  <% end %>
 		</div>
 
-		<!-- Album Item -->
-		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
-			<div class="album-card">
-				<div class="image hoverdir-target">
-					<img alt="image" src="images/album4.jpg" >
-					<div class="overlay" >
-						<div class="button-wrapper" >
-							<div class="view-button" >
-								<a class="link" href="single-album.html">
-								<span><strong class="bold">View</strong><br>Album</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Album Item -->
-		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
-			<div class="album-card">
-				<div class="image hoverdir-target">
-					<img alt="image" src="images/album5.jpg" >
-					<div class="overlay" >
-						<div class="button-wrapper" >
-							<div class="view-button" >
-								<a class="link" href="single-album.html">
-								<span><strong class="bold">View</strong><br>Album</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Album Item -->
-		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
-			<div class="album-card">
-				<div class="image hoverdir-target">
-					<img alt="image" src="images/album6.jpg" >
-					<div class="overlay" >
-						<div class="button-wrapper" >
-							<div class="view-button" >
-								<a class="link" href="single-album.html">
-								<span><strong class="bold">View</strong><br>Album</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Album Item -->
-		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
-			<div class="album-card">
-				<div class="image hoverdir-target">
-					<img alt="image" src="images/album7.jpg" >
-					<div class="overlay" >
-						<div class="button-wrapper" >
-							<div class="view-button" >
-								<a class="link" href="single-album.html">
-								<span><strong class="bold">View</strong><br>Album</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Album Item -->
-		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
-			<div class="album-card">
-				<div class="image hoverdir-target">
-					<img alt="image" src="images/album8.jpg" >
-					<div class="overlay" >
-						<div class="button-wrapper" >
-							<div class="view-button" >
-								<a class="link" href="single-album.html">
-								<span><strong class="bold">View</strong><br>Album</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 <!-- ALBUMS -->
 
 <!-- TOURS -->
@@ -475,26 +391,8 @@
 		<div class="col-md-8 col-md-offset-2">
 			<h3>Contact Us</h3>
 			<p><strong>For booking or any other information, fee free to get in touch!</strong></p>
-			<form id="contactForm" action="http://themesquared.com/html/musik/php/contact.php" method="post">
-				<label>Name (required)</label>
-				<input type="text" name="senderName" id="senderName" Required>
-				<label>Email Address (required)</label>
-				<input type="email" name="senderEmail" id="senderEmail" Required>
-				<label>Subject</label>
-				<input type="text" name="subject" id="subject">
-				<label>Message</label>
-				<textarea name="message" id="message"></textarea>
-				<button class="button large" type="submit">Send</button>
-			</form>
-			<div id="successMessage" class="successmessage">
-				<p><span class="success-ico"></span> Thanks for sending your message! We'll get back to you shortly.</p>
-			</div>
-			<div id="failureMessage" class="errormessage">
-				<p><span class="error-ico"></span> There was a problem sending your message. Please try again.</p>
-			</div>
-			<div id="incompleteMessage" class="statusMessage">
-				<p>Please complete all the fields in the form before sending.</p>
-			</div>
+					<!---make a contact us button -->
+
 		</div>
 	</div>
 </div>

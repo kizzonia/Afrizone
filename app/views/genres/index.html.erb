@@ -27,9 +27,8 @@
 					<div class="overlay" >
 						<div class="button-wrapper" >
 							<div class="view-button" >
-								    <h5><%= genre.title %></h5>
-                  <%= link_to 'View', genre, class: "link" do %>
-								<span><strong class="bold"></strong><br>Album</span>
+                          <%= link_to genre.name, albums_path(genre: genre.name) do %>
+                          <span><strong class="bold"></strong><br>Album</span>
                   <% end %>
 							</div>
 						</div>

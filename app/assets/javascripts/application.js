@@ -28,7 +28,6 @@
 //= require main1
 //= require main
 //= require video
-//= require jquery.parallaxify.min.html
 //= require custom
 //= require contact
 //= require turbolinks

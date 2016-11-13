@@ -1,12 +1,23 @@
 class AlbumsController < ApplicationController
   before_action :find_genre
   before_action :find_album, only: [:show]
+
+  def index
+    if params[:genre].blank?
+      @albums = Album.all.order('title ASC')
+    else
+      @genre_id = Genre.find_by(name: params[:genre])
+      @albums = Album.where(genre_id: @genre_id).order('title ASC')
+  end
+
+
   def new
-    @album = @genre.albums.new
+    @album = Album.new
+    @genres = Genre.all
   end
 
   def create
-    @albumm = @genre.albums.new(albums_params)
+    @albumm = Album.new(albums_params)
     if @album.save
       redirect_to genre_album_path(@genre)
     else

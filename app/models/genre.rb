@@ -1,3 +1,3 @@
 class Genre < ActiveRecord::Base
-  has_many :albumbs
+  has_many :albums
 end
