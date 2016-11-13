@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8">
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.png">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <title>Afrizone</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <div id="page-top"></div>
+
+  <div class="body">
+  <!-- HEADER -->
+  <header>
+  	<div class="container">
+  		<div class="logo col-md-2 col-xs-4">
+  			<a href="#"><img src="images/logo.png" class="img-responsive" alt=""/></a>
+  		</div>
+  		<div class="col-md-10 col-xs-8 header-right">
+  			<div class="row">
+  				<div class="col-md-12">
+  					<div class="topbar pull-right">
+  						<span class="tp-social">
+  						<a href="twitter.com" class="fa fa-twitter"></a>
+  						<a href="facebook.com" class="fa fa-facebook"></a>
+  						<a href="google.com" class="fa fa-google-plus"></a>
+  						</span>
+  					</div>
+
+  					<nav class="menu-wrap">
+  						<div id="mobnav-btn"><i class="fa fa-bars"></i></div>
+  						<ul class="sf-menu">
+  							<li>
+  								<a class="page-scroll" href="#page-top">Home</a>
+  							</li>
+  							<li><a class="page-scroll" href="#services">Services</a></li>
+  							<li><a class="page-scroll" href="#news-wrap">Blog</a></li>
+  							<li><a class="page-scroll" href="#albums">Albums</a></li>
+  							<li><a class="page-scroll" href="#tours">Events</a></li>
+  							<li><a class="page-scroll" href="#team-wrap">Genres</a></li>
+  							<li><a class="page-scroll" href="#gallery">Lyrics Gallery</a></li>
+  							<li><a class="page-scroll" href="#contact">Contact</a></li>
+  						</ul>
+  					</nav>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </header>
+  <!-- HEADER -->
+
+<%= yield %>
+
+<!-- FOOTER -->
+<section class="footer">
+	<div class="container">
+		<div class="col-md-3">
+			<div class="widget-content">
+				<h3 class="widget-title">About</h3>
+				<div class="textwidget">
+					<p></p>
+					<p class="hidden-xs">&copy; Copyright 2015. Zongosoft.inc. <br>All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="widget-content">
+				<h3 class="widget-title">Useful Links</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<ul class="footer-links">
+							<li><a href="#">About</a></li>
+							<li><a href="#">Releases</a></li>
+							<li><a href="#">Tour</a></li>
+							<li><a href="#">Gallery</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul class="footer-links">
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Terms</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="widget-content">
+				<h3 class="widget-title">Sign up to our Newsletter</h3>
+				<div class="form mc-form">
+					<form>
+						<input name="EMAIL" placeholder="Your email address" required="" type="email">
+						<button type="submit" class="btn btn-border">Subscribe</button>
+					</form>
+				</div>
+				<br>
+
+				<p class="visible-xs hidden-sm hidden-md hidden-lg text-center">&copy; Copyright 2016. Zongosoft.inc <br>All Rights Reserved.</p>
+
+			</div>
+		</div>
+	</div>
+</section>
+<!-- FOOTER -->
+
+</div>
+</div>
+
+</body>
+</html>
