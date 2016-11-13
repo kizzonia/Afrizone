@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113002947) do
+ActiveRecord::Schema.define(version: 20161113105250) do
+
+  create_table "albums", force: :cascade do |t|
+    t.string   "artist",     limit: 255
+    t.text     "history",    limit: 65535
+    t.integer  "year",       limit: 4
+    t.text     "notes",      limit: 65535
+    t.string   "name",       limit: 255
+    t.integer  "genre_id",   limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "albums", ["genre_id"], name: "index_albums_on_genre_id", using: :btree
 
   create_table "genres", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -21,4 +34,5 @@ ActiveRecord::Schema.define(version: 20161113002947) do
     t.datetime "updated_at",                null: false
   end
 
+  add_foreign_key "albums", "genres"
 end

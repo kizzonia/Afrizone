@@ -1,0 +1,41 @@
+<div id="page_head">
+	<div class="container">
+		<div class="col-md-12">
+			<h2>Choose your Genre</h2>
+
+			<ul class="bcrumb">
+				<li><a href="#"><i class="fa fa-home"></i></a><span class="sep"><i class="fa fa-angle-right"></i></span></li>
+				<li>Genres</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="albums">
+	<div class="section-head text-center">
+		<h2>Our Albums</h2>
+		<h5>Create Beautiful Albums with the Awesome Musik theme</h5>
+	</div>
+
+	<div class="album-list-wrap ">
+		<!-- Album Item -->
+    <% @genres.each do |genre| %>
+		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
+			<div class="album-card">
+				<div class="image hoverdir-target">
+					<%= image_tag "album1.jpg" %>
+					<div class="overlay" >
+						<div class="button-wrapper" >
+							<div class="view-button" >
+								    <h5><%= genre.title %></h5>
+                  <%= link_to 'View', genre, class: "link" do %>
+								<span><strong class="bold"></strong><br>Album</span>
+                  <% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    <%end%>
+  </div>
