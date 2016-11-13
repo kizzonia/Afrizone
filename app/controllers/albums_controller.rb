@@ -9,7 +9,7 @@ class AlbumsController < ApplicationController
       @genre_id = Genre.find_by(name: params[:genre])
       @albums = Album.where(genre_id: @genre_id).order('title ASC')
   end
-
+end
 
   def new
     @album = Album.new
