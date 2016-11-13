@@ -25,6 +25,7 @@ gem "font-awesome-rails"
 gem 'aws-sdk', '< 2.0'
 gem 'aws-sdk-v1', '~> 1.66'
 gem "pg"
+gem 'puma'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
