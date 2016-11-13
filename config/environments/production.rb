@@ -2,6 +2,8 @@ Rails.application.configure do
   config.cache_classes = true
   config.eager_load = true
 
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
+
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
   config.action_mailer.default_url_options = { :host => 'fcoders.herokuapp.com' }
