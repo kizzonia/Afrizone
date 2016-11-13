@@ -32,6 +32,7 @@ class AlbumsController < ApplicationController
 
     def albums_params
       params.require(:album).permit(:name, :notes, :year, :artist, :history)
+    end
     def find_genre
       @genre = Genre.find(params[:genre_id])
     end
