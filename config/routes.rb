@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
     resources :genres do
-      resources :albumbs
+      resources :albums
     end
 
   # The priority is based upon order of creation: first created -> highest priority.
