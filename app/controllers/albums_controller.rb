@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_action :find_genre
+
   before_action :find_album, only: [:show]
 
   def index
