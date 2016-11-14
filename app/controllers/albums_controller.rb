@@ -14,7 +14,7 @@ end
 
   def show
   end
-  
+
   def new
     @album = Album.new
     @genres = Genre.all
@@ -32,7 +32,7 @@ end
   private
 
     def albums_params
-      params.require(:album).permit(:name, :notes, :year, :artist, :history)
+      params.require(:album).permit(:name, :notes, :year, :artist, :history, :thumbnail)
     end
     def find_genre
       @genre = Genre.find(params[:genre_id])

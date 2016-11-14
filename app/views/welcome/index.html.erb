@@ -181,53 +181,13 @@
 		<h5>Create Beautiful Albums with the Awesome Musik theme</h5>
 	</div>
 
-	<div class="album-list-wrap ">
-		<!-- Album Item -->
-		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
-			<div class="album-card">
-				<div class="image hoverdir-target">
-					<img alt="image" src="images/album1.jpg">
-					<%= image_tag 'album1.jpg' %>
-					<div class="overlay" >
-						<div class="button-wrapper" >
-							<div class="view-button" >
-								<a class="link" href="single-album.html">
-								<span><strong class="bold">View</strong><br>Album</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Album Item -->
-		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
-			<div class="album-card">
-				<div class="image hoverdir-target">
-					<%= image_tag 'album2.jpg' %>
-					<div class="overlay" >
-						<div class="button-wrapper" >
-							<div class="view-button" >
-								<a class="link" href="single-album.html">
-								<span><strong class="bold">View</strong><br>Album</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<!-- Album Item -->
 		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
 			<% Genre.all.each do |genre| %>
-
-
-
 			<div class="album-card">
 				<div class="image hoverdir-target">
-					<img alt="image" src="images/album3.jpg" >
+					<%= image_tag genre.thumbnail.url(:medium) %>
 					<div class="overlay" >
 						<div class="button-wrapper" >
 							<div class="view-button" >

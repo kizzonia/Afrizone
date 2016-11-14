@@ -19,15 +19,15 @@
 
 	<div class="album-list-wrap ">
 		<!-- Album Item -->
-    <% @genres.each do |genre| %>
+    <% @albums.each do |album| %>
 		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
 			<div class="album-card">
 				<div class="image hoverdir-target">
-					<%= image_tag "album1.jpg" %>
+				<%= image_tag album.thumbnail.url(:medium) %>
 					<div class="overlay" >
 						<div class="button-wrapper" >
 							<div class="view-button" >
-                          <%= link_to genre.name, albums_path(genre: genre.name) do %>
+                          <%= link_to album.name, album_path do %>
                           <span><strong class="bold"></strong><br>Album</span>
                   <% end %>
 							</div>

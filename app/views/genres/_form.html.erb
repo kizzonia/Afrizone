@@ -7,6 +7,7 @@
         <%= f.input :title %><br />
         <%=f.input :description %><br />
         <%= f.input :type %><br />
+        <%= form.input :thumbnail, as: :file %>
         <%= f.submit :submit, class: "btn btn-default" %>
       </div>
     </div>
