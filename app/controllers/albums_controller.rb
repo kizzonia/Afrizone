@@ -11,6 +11,10 @@ class AlbumsController < ApplicationController
   end
 end
 
+
+  def show
+  end
+  
   def new
     @album = Album.new
     @genres = Genre.all
@@ -23,9 +27,6 @@ end
     else
       render 'new'
     end
-  end
-
-  def show
   end
 
   private
