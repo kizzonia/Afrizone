@@ -53,6 +53,37 @@
 	</div>
 </div>
 <!-- SERVICES -->
+<!-- ALBUMS -->
+<div id="albums">
+	<div class="section-head text-center">
+		<h2>Our Albums</h2>
+		<h5>Create Beautiful Albums with the Awesome Musik theme</h5>
+	</div>
+
+
+		<!-- Album Item -->
+		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
+			<% Genre.all.each do |genre| %>
+			<div class="album-card">
+				<div class="image hoverdir-target">
+					<%= image_tag genre.thumbnail.url(:medium) %>
+					<div class="overlay" >
+						<div class="button-wrapper" >
+							<div class="view-button" >
+								<a class="link" href="single-album.html">
+									<%= link_to genre.name, albums_path(genre: genre.name) do %>
+									<span><strong class="bold"></strong><br>Album</span>
+										<% end %>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			  <% end %>
+		</div>
+
+<!-- ALBUMS -->
 
 <!-- NEWS / BLOG -->
 <div id="news-wrap">
@@ -174,44 +205,13 @@
 </div>
 <!-- PLAYLIST -->
 
-<!-- ALBUMS -->
-<div id="albums">
-	<div class="section-head text-center">
-		<h2>Our Albums</h2>
-		<h5>Create Beautiful Albums with the Awesome Musik theme</h5>
-	</div>
-
-
-		<!-- Album Item -->
-		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
-			<% Genre.all.each do |genre| %>
-			<div class="album-card">
-				<div class="image hoverdir-target">
-					<%= image_tag genre.thumbnail.url(:medium) %>
-					<div class="overlay" >
-						<div class="button-wrapper" >
-							<div class="view-button" >
-								<a class="link" href="single-album.html">
-									<%= link_to genre.name, albums_path(genre: genre.name) do %>
-									<span><strong class="bold"></strong><br>Album</span>
-										<% end %>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			  <% end %>
-		</div>
-
-<!-- ALBUMS -->
 
 <!-- TOURS -->
 <div id="tours">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<img src="images/mic.jpg" class="img-responsive" alt=""/>
+				<%= image_tag 'mic.jpg', class: "img-responsive" %>
 			</div>
 			<div class="col-md-6">
 				<div class="col-md-11">

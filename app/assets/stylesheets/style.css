@@ -1556,7 +1556,7 @@ header {
 /* 16. SUBPAGE */
 
 #page_head {
-	background: #222 url(../images/intro.jpg) no-repeat center center;
+	background: #222 url('../assets/intro.jpg') no-repeat center center;
 	background-size: cover;
 	padding: 180px 0 150px;
 	position: relative;
@@ -2336,7 +2336,7 @@ header {
 }
 
 .success-ico {
-	background: url(../images/success.html);
+	background: url('../assets/success.html');
 	width: 21px;
 	height: 21px;
 	float: left;
@@ -2347,7 +2347,7 @@ header {
 }
 
 .error-ico {
-	background: url(../images/error.html);
+	background: url('../assets/error.html');
 	width: 21px;
 	height: 21px;
 	float: left;
