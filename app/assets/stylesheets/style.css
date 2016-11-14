@@ -2689,9 +2689,9 @@ header {
     padding-top: 2px;
 }
 
-.logo a img {
-    max-width: 120px;
-		height: 55px;
+.logo  .img {
+    max-width: 220px;
+		height: 65px;
 }
 
 .sf-menu > li > a {

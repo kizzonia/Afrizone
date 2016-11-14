@@ -44,7 +44,7 @@
 			</div>
 			<div class="col-md-3">
 				<div class="icon-box">
-					<i class="fa fa-soundcloud"></i>
+					<i class="play-photo2"></i>
 					<h3>Custom genere</h3>
 					<p>.Customize the list of song that matches your explict taste</p>
 				</div>
@@ -56,14 +56,14 @@
 <!-- ALBUMS -->
 <div id="albums">
 	<div class="section-head text-center">
-		<h2>Our Albums</h2>
-		<h5>Create Beautiful Albums with the Awesome Musik theme</h5>
+		<h2>Pick A Genre</h2>
+		<h5>Pick a genre and Enjoy your music </h5>
 	</div>
 
 
 		<!-- Album Item -->
+		<% Genre.all.each do |genre| %>
 		<div class="col-md-3 col-sm-6 album-card-wrap nopadding">
-			<% Genre.all.each do |genre| %>
 			<div class="album-card">
 				<div class="image hoverdir-target">
 					<%= image_tag genre.thumbnail.url(:medium) %>
@@ -80,8 +80,8 @@
 					</div>
 				</div>
 			</div>
-			  <% end %>
 		</div>
+		  <% end %>
 
 <!-- ALBUMS -->
 
@@ -370,30 +370,21 @@
 <!-- CLIENTS -->
 <div class="music-social-icons-container">
 	<div class="music-social-icons text-center">
-		<a href="#"><img src="images/clients/amazon.png" alt="" /></a>
-		<a href="#"><img src="images/clients/bandcamp.png" alt="" /></a>
-		<a href="#"><img src="images/clients/beatport.png" alt="" /></a>
-		<a href="#"><img src="images/clients/bigcartel.png" alt="" /></a>
-		<a href="#"><img src="images/clients/cdbaby.png" alt="" /></a>
-		<a href="#"><img src="images/clients/emusic.png" alt="" /></a>
-		<a href="#"><img src="images/clients/facebook.png" alt="" /></a>
-		<a href="#"><img src="images/clients/google.png" alt="" /></a>
-		<a href="#"><img src="images/clients/ilike.png" alt="" /></a>
-		<a href="#"><img src="images/clients/itunes.png" alt="" /></a>
-		<a href="#"><img src="images/clients/lastfm.png" alt="" ></a>
-		<a href="#"><img src="images/clients/mixcloud.png" alt="" /></a>
-		<a href="#"><img src="images/clients/myspace.png" alt="" /></a>
-		<a href="#"><img src="images/clients/purevolume.png" alt="" /></a>
-		<a href="#"><img src="images/clients/residentadvisor.png" alt="" /></a>
-		<a href="#"><img src="images/clients/reverbnation.png" alt="" /></a>
-		<a href="#"><img src="images/clients/soundcloud.png" alt="" /></a>
-		<a href="#"><img src="images/clients/spotify.png" alt="" /></a>
-		<a href="#"><img src="images/clients/triplej.png" alt="" /></a>
-		<a href="#"><img src="images/clients/twitter.png" alt="" /></a>
-		<a href="#"><img src="images/clients/unsigned.png" alt="" /></a>
-		<a href="#"><img src="images/clients/vimeo.png" alt="" /></a>
-		<a href="#"><img src="images/clients/youtube.png" alt="" /></a>
-		<a href="#"><img src="images/clients/zune.png" alt="" /></a>
+		<%= link_to "clients/amazon.png"%>
+		<%= link_to "clients/bandcamp.png"%>
+		<%= link_to "clients/beatport.png"%>
+		<%= link_to "clients/bigcartel.png"%>
+		<%= link_to "clients/emusic.png"%>
+		<%= link_to "clients/facebook.png"%>
+		<%= link_to "clients/cdbaby.png"%>
+		<%= link_to "clients/google.png"%>
+		<%= link_to "clients/liike.png"%>
+		<%= link_to "clients/itunes.png"%>
+		<%= link_to "clients/mixcloud.png"%>
+		<%= link_to "clients/soundcloud.png"%>
+		<%= link_to "clients/spotify.png"%>
+		<%= link_to "clients/zune.png"%>
+		
 	</div>
 </div>
 <!-- CLIENTS -->
