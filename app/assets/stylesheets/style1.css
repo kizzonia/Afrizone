@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'play-icons';
-    src:    url('fonts/play-icons73eb.html?k00e7q');
-    src:    url('fonts/play-icons73eb.html?k00e7q#iefix') format('embedded-opentype'),
-        url('fonts/play-icons73eb.woff?k00e7q') format('woff'),
-        url('fonts/play-icons73eb.svg?k00e7q#play-icons') format('svg');
+    src:    url('../assets/play-icons73eb.html?k00e7q');
+    src:    url('../assets/play-icons73eb.html?k00e7q#iefix') format('embedded-opentype'),
+        url('../assets/play-icons73eb.woff?k00e7q') format('woff'),
+        url('../assets/play-icons73eb.svg?k00e7q#play-icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -179,4 +179,3 @@
 .play-world:before {
     content: "\e953";
 }
-
