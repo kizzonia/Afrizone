@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require bootstrap
-//= require tether
 //= require bootstrap-sprockets
-//= require jquery-ui.min
+//= require tether
 //= require jquery_ujs
+//= require jquery-ui.min
 //= require classie
 //= require tweecool.min
 //= require jplayer.playlist.min
