@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap.min
+//= require ckeditor/init
+//= require jquery_ujs
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require menu
@@ -19,6 +22,9 @@
 //= require jquery-ui.min
 //= require main1
 //= require main
+//= require jplayer.playlist.min
+//= require jquery.jplayer.min
+//= require_tree .
 //= require tether
 //= require superfish
 //= require hoverIntent
@@ -29,7 +35,5 @@
 //= require contact
 //= require classie
 //= require tweecool.min
-//= require jplayer.playlist.min
-//= require jquery.jplayer.min
+
 //= require turbolinks
-//= require_tree .

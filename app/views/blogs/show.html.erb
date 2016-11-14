@@ -1,19 +1,101 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+<div class="wrapper">
 
-<p>
-  <strong>Sub title:</strong>
-  <%= @blog.sub_title %>
-</p>
+<!-- BLOG-SINGLE -->
+<div class="sp-body">
+	<div class="body">
+		<div class="inner-content">
+			<div class="page-wrapper" >
+				<div id="blog-single">
+					<!-- Post header -->
+					<div id="post-header" class="parallax-parent">
+						<!-- Header image -->
+						<div  class="image-holder">
+							<div class="header-cover">
+                <%= image_tag "banner@show", class: "img-fit"  %>
+							</div>
+						</div>
+						<!-- /Header image -->
+						<!-- Header content -->
+						<div data-parallaxify-range-y="60" class="header-content" data-ratio="1">
+							<div class="container">
+								<h1 class="post-title">
+                  <%= @blog.title %>
+								</h1>
+							</div>
+						</div>
+						<!-- /Header content -->
+					</div>
+					<!-- /Post header -->
+					<div class="container">
+						<!-- Post body -->
+						<div id="post-body">
+							<div class="row">
+								<!-- Post sidebar -->
+								<div id="post-side" class="col-md-3">
+									<!-- Post meta -->
+									<div class="post-meta">
+										<div class="post-meta-inner">
+											<div class="post-author-name"><i class="fa fa-user list-icon"></i><a href="#">Creative</a></div>
+											<div class="post-date"><i class="fa fa-calendar-o list-icon"></i>April 18, 2015</div>
+											<div class="post-categories">
+												<i class="fa fa-folder-o list-icon"></i><a href="#" rel="category tag">Uncategorized</a>
+											</div>
+										</div>
+									</div>
+									<!-- /Post meta -->
+								</div>
+								<!-- /Post sidebar -->
+								<!-- Post main area -->
+								<div class="col-md-9">
+									<div class="post mb-xlarge">
+										<!-- Post Content -->
+										<div id="post-content">
+											<p><%= @blog.sub_title %></p>
+											<blockquote>
+                        <%= image_tag @blog.thumbnail.url(:medium), class: "img-responsive" %></p>
+											</blockquote>
 
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
+                      <p><%= raw(@blog.body) %>
+													</div>
+										<!-- /Post Content -->
+									</div>
+									<hr>
+									<div id="post-comments">
+										<div id="comment-form">
+											<h2 class="">Leave a Comment</h2>
+											<div id="respond" class="comment-respond">
+												<form action="#" method="post" id="commentform" class="comment-form">
+													<div class="row row-inputs margin-bottom-lg">
+														<div class="col-md-4 col-sm-6"><input class="form-control" placeholder="Name" type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true"></div>
+														<div class="col-md-4 col-sm-6"><input class="form-control" placeholder="Email" type="text" name="email" id="email" value="" size="22" tabindex="1" aria-required="true"></div>
+														<div class="col-md-4 col-sm-6"><input class="form-control" placeholder="Website" type="text" name="url" id="url" value="" size="22" tabindex="1" aria-required="true"></div>
+													</div>
+													<div class="row row-inputs margin-bottom-lg">
+														<div class="col-md-12">
+															<textarea class="form-control" id="comment" name="comment" rows="8" placeholder="Comment" aria-required="true"></textarea>
+														</div>
+													</div>
+													<p class="form-submit margin-bottom-lg">
+														<a class="button gray large" href="#">Post Comment</a>
+														<input type="hidden" name="comment_post_ID">
+														<input type="hidden" name="comment_parent" >
+													</p>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+  <%= link_to 'Edit', edit_blog_path(@blog) %> |
+  <%= link_to 'Back', blogs_path %>
+
+</div>
+<!-- BLOG-SINGLE -->

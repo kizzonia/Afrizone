@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tours
   resources :blogs
   root 'welcome#index'
     resources :genres

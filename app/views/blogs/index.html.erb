@@ -1,32 +1,42 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Blogs</h1>
+<div class="wrapper">
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Sub title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<!-- BLOG-SINGLE -->
+<!-- NEWS / BLOG -->
+<div id="news-wrap">
+	<div class="container">
+		<div class="section-head text-center">
+			<h2>Latest Blog News today</h2>
+			<h5>Morbi sollic itudin eros erat id pharetra libero fringilla quis.</h5>
+		</div>
 
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <%= image_tag blog.thumbnail.url(:medium) %>
-        <td><%= blog.title %></td>
-        <td><%= blog.sub_title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+		<section class="news-main" id="news-main">
+			<div class="container">
+				<div class="row">
+					<div id="news-grid">
+              <% @blogs.each do |blog| %>
+						<div class="news-item col-md-4">
+							<div class="ni-wrap">
+                <%= image_tag blog.thumbnail.url(:medium), class: "img-responsive" %>
+								<h4><%= raw(blog.title) %></h4>
+								<div class="news-meta">
+									<span><i class="fa fa-clock-o"></i> Feb 7, 2016</span>
+									<span><i class="fa fa-user"></i> Admin</span>
+									<span><i class="fa fa-comments"></i> <a href="#">4 Comments</a></span>
+								</div>
+								<p><%=raw(blog.sub_title) %></p>
+							<%= link_to 'View More', blog, class: "btn btn-default btn-xs" %>
+							</div>
+						</div>
+            <% end %>
 
-<br>
-
-<%= link_to 'New Blog', new_blog_path %>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+<%= link_to 'New Blog', new_blog_path, class: "btn btn-success" %>
+<!-- NEWS / BLOG -->
+</div>
+<!-- BLOG-SINGLE -->

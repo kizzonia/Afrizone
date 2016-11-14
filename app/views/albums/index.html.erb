@@ -37,4 +37,6 @@
 			</div>
 		</div>
     <%end%>
+		<%= link_to 'New genre', new_album_path, class: 'btn btn-default' %>
+		<%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
   </div>

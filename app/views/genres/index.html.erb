@@ -27,7 +27,7 @@
 					<div class="overlay" >
 						<div class="button-wrapper" >
 							<div class="view-button" >
-                          <%= link_to genre.name, albums_path(genre: genre.name) do %>
+                          <%= link_to genre.title, albums_path(genre: genre.title) do %>
                           <span><strong class="bold"></strong><br>Album</span>
                   <% end %>
 							</div>
@@ -37,4 +37,6 @@
 			</div>
 		</div>
     <%end%>
+		<%= link_to 'New genre', new_genre_path, class: 'btn btn-default' %>
+		<%= link_to 'Destroy', genre, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
   </div>

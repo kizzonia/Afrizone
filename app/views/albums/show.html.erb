@@ -2,11 +2,11 @@
 <div id="page_head">
 	<div class="container">
 		<div class="col-md-12">
-			<h2>Album - Single</h2>
+			<h2><%= @album.name %></h2>
 
 			<ul class="bcrumb">
 				<li><a href="#"><i class="fa fa-home"></i></a><span class="sep"><i class="fa fa-angle-right"></i></span></li>
-				<li>Single Album</li>
+				<li><%= @album.name %></li>
 
 			</ul>
 		</div>
@@ -20,18 +20,18 @@
 		<div class="container">
 		<div class="box-wrapper col-md-4">
 			<div class="box-info">
-				<h2 class="heading">Live in Texas</h2>
+				<h2 class="heading"></h2>
 				<ul class="list-unstyled">
 					<li>Artist: Linkin Park</li>
-					<li>Release Date: 2004-04-10</li>
-					<li>Genre: Metal</li>
-					<li>Produced By: Warner Bros. Records</li>
+					<li>Release Date: <%= @album.year %></li>
+					<li>Genre: <%= @genre.title %></li>
+					<li>Produced By: <%= @album.notes %></li>
 					<li>
-						Price: $9
+						History <%= @album.history %>
 					</li>
 				</ul>
 				<div class="row-fluid margin-bottom-lg ">
-					<a class="btn btn-default" href="#">Buy Now</a>
+					<a class="btn btn-default" href="#">play Now</a>
 				</div>
 			</div>
 		</div>
