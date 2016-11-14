@@ -2690,7 +2690,8 @@ header {
 }
 
 .logo a img {
-    max-width: 90px;
+    max-width: 120px;
+		height: 55px;
 }
 
 .sf-menu > li > a {
