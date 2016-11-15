@@ -4,10 +4,10 @@ class AlbumsController < ApplicationController
 
   def index
     if params[:genre].blank?
-      @albums = Album.all.order('title ASC')
+      @albums = Album.all
     else
       @genre_id = Genre.find_by(name: params[:genre])
-      @albums = Album.where(genre_id: @genre_id).order('title ASC')
+      @albums = Album.where(genre_id: @genre_id)
   end
 end
 
