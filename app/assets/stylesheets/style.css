@@ -318,7 +318,7 @@ header {
 }
 
 .logo {
-	padding-top: 22px;
+	padding-top: 2px;
 }
 
 .logo-alt {
@@ -330,8 +330,9 @@ header {
 	text-align: center;
 }
 
-.logo a img {
+.logo a .img {
 	max-width: 135px;
+	height: 65px;
 }
 
 .topbar {
