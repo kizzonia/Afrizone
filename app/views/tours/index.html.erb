@@ -1,34 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div id="tours">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<%= image_tag 'mic.jpg', class: "img-responsive" %>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-11">
+					<h3>Upcoming Shows</h3>
+          <ul class="tour-list">
+            <% @tours.each do |tour| %>
 
-<h1>Listing Tours</h1>
+						<li>
+							<div class="tour-date"><%= tour.date %></div>
+							<div class="tour-info">Melbourne, AU - <%= link_to tour.title %></div>
+							<div class="tour-ticket"><%= tour.place %></div>
+              <div class="tour-ticket"><%= tour.artist %></div>
+              <div class="tour-ticket"><%= link_to 'View', tour, class: "btn btn-default" %></div>
+              <div class="tour-ticket">      <%= link_to 'Destroy', tour, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+						</li>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Timimg</th>
-      <th>Date</th>
-      <th>Place</th>
-      <th>Artist</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @tours.each do |tour| %>
-      <tr>
-        <td><%= tour.title %></td>
-        <td><%= tour.timimg %></td>
-        <td><%= tour.date %></td>
-        <td><%= tour.place %></td>
-        <td><%= tour.artist %></td>
-        <td><%= link_to 'Show', tour %></td>
-        <td><%= link_to 'Edit', edit_tour_path(tour) %></td>
-        <td><%= link_to 'Destroy', tour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
     <% end %>
-  </tbody>
-</table>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <br>
 

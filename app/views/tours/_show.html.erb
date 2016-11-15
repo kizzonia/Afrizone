@@ -1,0 +1,32 @@
+<div id="tours">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<%= image_tag 'mic.jpg', class: "img-responsive" %>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-11">
+					<h3>Upcoming Shows</h3>
+          <ul class="tour-list">
+						<li>
+							<div class="tour-date"><%= @tour.date %></div>
+							<div class="tour-info">Melbourne, AU - <%= link_to @tour.title %></div>
+							<div class="tour-ticket"><%= @tour.place %></div>
+              <div class="tour-ticket"><%= @tour.artist %></div>
+              <div class="tour-ticket"> <%= link_to 'Destroy', @tour, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+						</li>
+
+
+
+
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<br>
+
+<%= link_to 'New Tour', new_tour_path %>
