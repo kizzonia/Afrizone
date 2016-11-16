@@ -12,9 +12,7 @@
 
 						<li>
 							<div class="tour-date"><%= tour.date %></div>
-							<div class="tour-info" <%= link_to tou>r.title %></div>
-							<div class="tour-ticket"><%= tour.place %></div>
-              <div class="tour-ticket"><%= tour.artist %></div>
+							<div class="tour-info"> <%= link_to tour.title %></div>
               <div class="tour-ticket"><%= link_to 'View', tour, class: "btn btn-default" %></div>
               <div class="tour-ticket">  <%= link_to 'Destroy', tour, method: :delete, data: { confirm: 'Are you sure?' } %>
                 </div>
