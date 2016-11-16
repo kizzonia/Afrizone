@@ -11,14 +11,14 @@
 // about supported directives.
 
 //= require jquery
-//= require bootstrap.min
-//= require ckeditor/init
 //= require menu
+//= require ckeditor/init
+//= require bootstrap
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require init
 //= require jquery_ujs
-//= require bootstrap
-//= require bootstrap-sprockets
+
 //= require jquery-ui.min
 //= require classie
 //= require tweecool.min
