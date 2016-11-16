@@ -3,14 +3,18 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-
+<br>
+<br>
         <%= f.input :title, placeholder: "Genre title" %><br />
+        <br>
         <%=f.input :description,  placeholder: "Genre discription", :as => :ckeditor, :input_html=> {:ckeditor => {:toolbar => "Full"}}, :rows => 16, :cols => 16 %><br />
         <%= f.input :type, placeholder: "Genre type"%><br />
-        <%= form.input :thumbnail, as: :file %>
+        <br>
+        <%= f.input :thumbnail, as: :file %>
         <%= f.submit :submit, class: "btn btn-default" %>
       </div>
     </div>
   </div>
 </div>
 <% end %>
+<br><br>

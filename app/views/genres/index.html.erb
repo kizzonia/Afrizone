@@ -13,8 +13,8 @@
 </div>
 <div id="albums">
 	<div class="section-head text-center">
-		<h2>Our Albums</h2>
-		<h5>Create Beautiful Albums with the Awesome Musik theme</h5>
+		<h2>Our Genress</h2>
+		<h5>Pick A Genre access our music store</h5>
 	</div>
 
 	<div class="album-list-wrap ">
@@ -28,7 +28,7 @@
 						<div class="button-wrapper" >
 							<div class="view-button" >
                           <%= link_to genre.title, albums_path(genre: genre.title) do %>
-                          <span><strong class="bold"></strong><br>Album</span>
+                          <span><strong class="bold"></strong><br>Genres</span>
                   <% end %>
 							</div>
 						</div>
@@ -36,7 +36,14 @@
 				</div>
 			</div>
 		</div>
-    <%end%>
-		<%= link_to 'New genre', new_genre_path, class: 'btn btn-default' %>
+		<br>
+			<br>	<br>	<br>
+		<div class="text-center">
+
 		<%= link_to 'Destroy', genre, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
-  </div>
+	</div>
+    <%end%>
+		<div class="text-center">
+		<%= link_to 'New genre', new_genre_path, class: 'btn btn-default' %>
+	</div>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114004809) do
+ActiveRecord::Schema.define(version: 20161114201344) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "artist",                 limit: 255
@@ -42,6 +42,22 @@ ActiveRecord::Schema.define(version: 20161114004809) do
     t.datetime "thumbnail_updated_at"
   end
 
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",    limit: 255, null: false
+    t.string   "data_content_type", limit: 255
+    t.integer  "data_file_size",    limit: 4
+    t.integer  "assetable_id",      limit: 4
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width",             limit: 4
+    t.integer  "height",            limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
   create_table "genres", force: :cascade do |t|
     t.string   "title",                  limit: 255
     t.text     "description",            limit: 65535
@@ -52,6 +68,16 @@ ActiveRecord::Schema.define(version: 20161114004809) do
     t.string   "thumbnail_content_type", limit: 255
     t.integer  "thumbnail_file_size",    limit: 4
     t.datetime "thumbnail_updated_at"
+  end
+
+  create_table "tours", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.string   "timimg",     limit: 255
+    t.string   "date",       limit: 255
+    t.string   "place",      limit: 255
+    t.string   "artist",     limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_foreign_key "albums", "genres"
