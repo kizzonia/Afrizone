@@ -9,7 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//= require init
+
 //= require jquery
 //= require bootstrap.min
 //= require ckeditor/init
@@ -17,8 +17,10 @@
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require menu
-//= require jquery_ujs
 //= require custom
+//= require turbolinks
+//= require init
+
 //= require jquery-ui.min
 //= require main1
 //= require main
@@ -34,4 +36,3 @@
 //= require contact
 //= require classie
 //= require tweecool.min
-//= require turbolinks
