@@ -8,7 +8,7 @@
         <%= f.input :history,  placeholder: "The History", :as => :ckeditor, :input_html=> {:ckeditor => {:toolbar => "Full"}}, :rows => 16, :cols => 16 %>
         <%= f.input :artist, placeholder: "Who's the artist" %>
         <%= f.input :year, placeholder: "Type in production Year" %>
-        <%= form.input :thumbnail, as: :file %>
+        <%= f.input :thumbnail, as: :file %>
         <%= f.collection_select :genre_id, Genre.all, :id, :type, {prompt: "Choose a Genre "} %>
         <%= f.submit :submit, class: "btn btn-default" %>
       </div>

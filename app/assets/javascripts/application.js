@@ -12,11 +12,10 @@
 
 //= require jquery
 //= require bootstrap.min
-//= require bootstrap
 //= require ckeditor/init
 //= require jquery_ujs
-//= require turbolinks
-//= require init
+//= require bootstrap
+//= require bootstrap-sprockets
 //= require jquery-ui.min
 //= require classie
 //= require tweecool.min
@@ -32,3 +31,5 @@
 //= require main1
 //= require custom
 //= require contact
+//= require turbolinks
+//= require init
