@@ -15,21 +15,22 @@
 //= require ckeditor/init
 //= require bootstrap
 //= require bootstrap-sprockets
+//= require superfish
 //= require turbolinks
 //= require init
 //= require jquery_ujs
-
-//= require jquery-ui.min
 //= require classie
 //= require tweecool.min
-//= require jplayer.playlist.min
-//= require jquery.jplayer.min
-//= require superfish
+//= require jquery-ui.min
 //= require hoverIntent
 //= require stellar
 //= require jquery.easing.min
 //= require tether
 //= require main
-//= require main1
+//= require jplayer.playlist.min
+//= require jquery.jplayer.min
+
+
+
 //= require custom
 //= require contact
