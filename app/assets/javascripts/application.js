@@ -13,6 +13,9 @@
 //= require jquery
 //= require bootstrap.min
 //= require ckeditor/init
+//= require menu
+//= require turbolinks
+//= require init
 //= require jquery_ujs
 //= require bootstrap
 //= require bootstrap-sprockets
@@ -23,7 +26,6 @@
 //= require jquery.jplayer.min
 //= require superfish
 //= require hoverIntent
-//= require menu
 //= require stellar
 //= require jquery.easing.min
 //= require tether
@@ -31,5 +33,3 @@
 //= require main1
 //= require custom
 //= require contact
-//= require turbolinks
-//= require init
