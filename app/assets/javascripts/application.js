@@ -9,7 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//= require init
 //= require jquery
 //= require bootstrap.min
 //= require ckeditor/init
@@ -24,7 +24,6 @@
 //= require main
 //= require jplayer.playlist.min
 //= require jquery.jplayer.min
-//= require_tree .
 //= require tether
 //= require superfish
 //= require hoverIntent
@@ -35,5 +34,4 @@
 //= require contact
 //= require classie
 //= require tweecool.min
-
 //= require turbolinks
